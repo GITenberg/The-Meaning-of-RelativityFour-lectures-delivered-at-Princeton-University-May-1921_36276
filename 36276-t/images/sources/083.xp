@@ -1,0 +1,26 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-1, -1), P(1, 1), "4 x 4in");
+
+  begin();
+  double ht(-0.3);
+  P pP(-0.76, ht), pG(0.94, ht);
+  label(P(0,0), "\\includegraphics[width=4in]{083-300.eps}");
+
+  bold();
+  arrow_inset(0.75);
+  arrow_width(5);
+  arrow_ratio(2);
+
+  aarrow(pP, pG);
+
+  label(pP, P(-4,-2), "$P$", l);
+  label(pG, P( 4,-2), "$G$", r);
+
+  tikz_format();
+  end();
+}

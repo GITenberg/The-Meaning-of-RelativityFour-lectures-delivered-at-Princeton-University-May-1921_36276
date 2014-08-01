@@ -1,0 +1,49 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  // aspect ratio hack to get perpendicular cone generators
+  picture(P(-2,-2), P(2,2), "3.75 x 4in");
+
+  begin();
+  double ratio(0.25), ht(1.5), m(0.3), th(Atan(ratio));
+
+  P Px2(1, m),
+    Pht1( ht*Cos(th), ht*(1 - ratio*Sin(th))),
+    Pht2(-ht*Cos(th), ht*(1 - ratio*Sin(th)));
+
+  bold();
+
+  line(P(xmin(), 0), P(xmax(), 0));
+  line(P(0, ymin()), P(0, -ht*(1 + ratio)));
+  line(P(0, ht), P(0, ymax()));
+  line(-Px2, Px2);
+
+  line(-Pht1, Pht1);
+  line(-Pht2, Pht2);
+
+  ellipse(P(0, -ht), P(ht,0), P(0, ratio*ht), -M_PI-th, th, 60);
+  ellipse(P(0, ht), ht*P(1, ratio));
+
+  ddot(P(0,-ht));
+  ddot(P(0, ht));
+
+  dashed();
+  ellipse(P(0, -ht), P(ht,0), P(0, ratio*ht), th, M_PI-th, 35);
+  white();
+  dot(P(0, ht*(-1 + ratio)));
+  black();
+  line(P(0, -ht), P(0, ht));
+
+  dash_size(2);
+  line(P(0, -ht*(1 + ratio)), P(0, -ht));
+
+  label(P(xmax(), 0), P(4,0), "$x_{1}$", r);
+  label(Px2, P(2,2), "$x_{2}$", tr);
+  label(P(0, ymax()), P(0,4), "$l$", t);
+
+  tikz_format();
+  end();
+}

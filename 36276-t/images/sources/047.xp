@@ -1,0 +1,61 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+double dx(0.25), ml1(0.3), ml(0.5), ml2(1.5), mX(1.75),
+  tmin(-0.25), dt(0.1), tmax(-tmin + dt);
+
+P fA(double t)
+{
+  return P(0.75*(1 + 0.375*t*(1 + 0.5*t*t)), 1 + t);
+}
+
+P fB(double t)
+{
+  return fA(t) + P(dx,0);
+}
+
+int main()
+{
+  picture(P(0, 0), P(2,2), "4 x 4in");
+
+  begin();
+
+  P pA(fA(ml - 1)), pB(fB(ml - 1));
+
+  bold();
+
+  line(P(0, 0), P(xmax(), 0));
+  line(P(0, 0), P(0, ymax()));
+
+  line(P(0, ml), P(mX, ml));
+
+  plot(fA, -0.9 + dt, 0.9, 20);
+  plot(fB, -0.9, 0.9 - dt, 20);
+
+  fill(Black(0.2));
+  path bd(fA, tmin + dt, tmax, 10);
+  bd -= path(fB, tmin, tmax - 0.5*dt, 10);
+  bd.close().fill().draw();
+  nofill();
+
+  dashed();
+
+  line(P(0, ml1), P(mX, ml1));
+  line(P(0, ml2), P(mX, ml2));
+
+  label(P(xmax(), 0), P(4,0), "$x_{1}$", r);
+  label(P(0, ymax()), P(-8,0), "$l$", l);
+
+  label(P(0, ml1), P(-4,0), "$l_{1}$", l);
+  label(P(0,  ml), P(-8,0), "$l}$", l);
+  label(P(0, ml2), P(-4,0), "$l_{2}$", l);
+
+  label(P(0,0), P(-2,-2), "$O$", bl);
+
+  label(pA, P(0,2), "$A$", tl);
+  label(pB, P(6,2), "$B$", tr);
+
+  tikz_format();
+  end();
+}

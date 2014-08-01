@@ -1,0 +1,25 @@
+%% Generated from 083.xp on Thu May 19 20:11:00 EDT 2011 by
+%% ePiX-1.2.4
+%% 
+%%   Cartesian bounding box: [-1,1] x [-1,1]
+%%   Actual size: 4 x 4in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\begin{tikzpicture}
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (4in,4in);
+\pgftext[at={\pgfpoint{2in}{2in}}] {\makebox(0,0)[c]{\hbox{\color{rgb_000000}\includegraphics[width=4in]{083-300.eps}}}}
+\pgfsetlinewidth{0.8pt}
+\draw (2.18in,1.4in)--(0.48in,1.4in);
+\pgfsetfillcolor{rgb_000000}
+\draw [fill](0.497296in,1.4in)--(0.549185in,1.43459in)--
+  (0.48in,1.4in)--(0.549185in,1.36541in)--(0.497296in,1.4in)--cycle;
+\draw (2.18in,1.4in)--(3.88in,1.4in);
+\draw [fill](3.8627in,1.4in)--(3.81081in,1.36541in)--
+  (3.88in,1.4in)--(3.81081in,1.43459in)--(3.8627in,1.4in)--cycle;
+\pgftext[at={\pgfpoint{0.424652in}{1.37233in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$P$}}}
+\pgftext[at={\pgfpoint{3.93535in}{1.37233in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$G$}}}
+\end{tikzpicture}
