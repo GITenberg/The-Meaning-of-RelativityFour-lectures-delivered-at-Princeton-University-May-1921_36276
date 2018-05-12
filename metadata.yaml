@@ -1,0 +1,40 @@
+_repo: The-Meaning-of-RelativityFour-lectures-delivered-at-Princeton-University-May-1921_36276
+_version: 0.1.0
+contributor:
+  translator:
+    agent_name: Adams, Edwin P. (Edwin Plimpton)
+    alias: Adams, Edwin Plimpton
+    birthdate: 1878
+    deathdate: 1956
+    gutenberg_agent_id: '38176'
+    url: http://www.gutenberg.org/2009/agents/38176
+covers:
+- cover_type: generated
+  image_path: cover.png
+creator:
+  author:
+    agent_name: Einstein, Albert
+    birthdate: 1879
+    deathdate: 1955
+    gutenberg_agent_id: '1630'
+    url: http://www.gutenberg.org/2009/agents/1630
+    wikipedia: http://en.wikipedia.org/wiki/Albert_Einstein
+description: ''
+gutenberg_bookshelf:
+- Physics
+- Mathematics
+gutenberg_issued: '2011-05-29'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '36276'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcsh 'Relativity (Physics)'
+- !lcc 'QC'
+title: 'The Meaning of Relativity
+
+  Four lectures delivered at Princeton University, May, 1921'
+url: http://www.gutenberg.org/ebooks/36276
