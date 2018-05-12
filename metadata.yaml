@@ -20,6 +20,8 @@ creator:
     url: http://www.gutenberg.org/2009/agents/1630
     wikipedia: http://en.wikipedia.org/wiki/Albert_Einstein
 description: ''
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/36276#The-Meaning-of-RelativityFour-lectures-delivered-at-Princeton-University-May-1921
 gutenberg_bookshelf:
 - Physics
 - Mathematics
