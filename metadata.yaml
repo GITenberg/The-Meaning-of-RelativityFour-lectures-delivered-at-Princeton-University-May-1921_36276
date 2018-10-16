@@ -36,6 +36,7 @@ rights_url: http://creativecommons.org/about/pdm
 subjects:
 - !lcsh 'Relativity (Physics)'
 - !lcc 'QC'
+- GITenberg
 title: 'The Meaning of Relativity
 
   Four lectures delivered at Princeton University, May, 1921'
